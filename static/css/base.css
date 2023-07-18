@@ -14,3 +14,28 @@
 .lh-lg {
     font-size: 1.125rem;
 }
+
+[data-bs-theme="dark"] .habilidades-list .card {
+    border: #fff solid 2px;
+}
+
+[data-bs-theme="light"] .habilidades-list .card {
+    color: #000 solid 2px;
+}
+
+.habilidades-list .card {
+    margin: 10px;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.habilidades-list .card:hover {
+    transform: scale(1.05);
+}
+
+.img-card-size {
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    height: 100px;
+    margin: 10px;
+}

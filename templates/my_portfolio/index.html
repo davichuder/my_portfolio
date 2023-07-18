@@ -4,19 +4,19 @@
 {% block titulo_ventana %}David Rolón{% endblock %}
 
 {% block main %}
-<div class="text-center">
-    <p class="text-uppercase display-1">¡Bienvenido!</p>
-    <p class="display-6">Te doy la bienvenida a mi portfolio personal</p>
-    <img class="rounded-circle img-thumbnail" id="avatar" src='{% static "img/cv.png" %}' alt="Foto" width="200" height="200">
-    <p class="display-6">Me llamo <b>David Rolón</b></p>
-    <p class="lh-lg">
-        En este portfolio podrás conocer más sobre mí, mi trayectoria profesional y mis habilidades.<br>
-        Desde pequeño me fascinó el mundo digital y la tecnología.<br>
-        Por eso decidí estudiar informática y especializarme en el desarrollo web y el análisis de datos.<br>
-        Vas a poder conocer algunos de los proyectos que he realizado, donde aplico mis habilidades y conocimientos en diferentes áreas y tecnologías.<br>
-        Desde la creación de páginas web dinámicas, interactivas y atractivas, así como para extraer información valiosa de grandes volúmenes de datos.<br>
-        Espero que disfrutes navegando por mi portfolio y que te sirva para conocerme mejor.<br>
-        ¡No dudes en contactarme si tienes alguna pregunta o comentario!<br>
-    </p>
+<div class="container text-center py-3 mb-5">
+    <h1 class="display-4">¡BIENVENIDO!</h1>
+    <p class="lead">Gracias por visitar mi portfolio personal</p>
+    <img src="{% static 'img/cv.png' %}" alt="Foto de David Rolón" class="img-fluid rounded-circle my-3"
+        style="width: 200px; height: 200px;">
+    <h2 class="mb-4">Me llamo David Rolón</h2>
+    <p>En este portfolio podrás conocer más sobre mí, mi trayectoria profesional y mis habilidades.<br>
+        Desde muy joven me fascinó el mundo digital y la tecnología, por lo que decidí estudiar programación y
+        especializarme en el análisis de datos y el desarrollo web.</p>
+    <p>Vas a poder conocer algunos de los proyectos que he realizado, donde aplico mis habilidades y conocimientos en
+        diferentes áreas y tecnologías.<br>
+        Desde la creación de páginas web dinámicas, interactivas y atractivas, hasta la
+        extracción de información valiosa de grandes volúmenes de datos.</p>
+    <p>Espero que disfrutes navegando por mi portfolio y que esta plataforma te permita conocerme mejor.</p>
 </div>
 {% endblock %}
