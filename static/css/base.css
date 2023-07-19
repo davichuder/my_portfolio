@@ -1,3 +1,7 @@
+body {
+    margin-bottom: 66px;
+}
+
 .icon-logo-light {
     content: var(--logo-light);
 }
@@ -15,27 +19,29 @@
     font-size: 1.125rem;
 }
 
-[data-bs-theme="dark"] .habilidades-list .card {
-    border: #fff solid 2px;
+[data-bs-theme="dark"] .card {
+    border: 1px solid #fff;
+    background-color: rgb(255, 255, 255, 0.1);
 }
 
-[data-bs-theme="light"] .habilidades-list .card {
-    color: #000 solid 2px;
+[data-bs-theme="light"] .card {
+    border: 1px solid rgb(33,37,41);
 }
 
-.habilidades-list .card {
-    margin: 10px;
+.card {
     transition: all 0.3s;
     text-align: center;
 }
 
-.habilidades-list .card:hover {
+.card:hover {
     transform: scale(1.05);
 }
 
 .img-card-size {
     aspect-ratio: 3/2;
+    height: 5rem;
     object-fit: contain;
-    height: 100px;
-    margin: 10px;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    margin-top: 0.5rem;    
 }

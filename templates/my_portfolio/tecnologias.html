@@ -5,17 +5,19 @@
 
 {% block main %}
 <div class="container py-5" id="habilidades">
-    <div class="card-group habilidades-list">
-    {% for item in tecnologias %}
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+        {% for item in tecnologias %}
         {% with 'img/tecnology/'|add:item.1 as img_path %}
-        <div class="card">
+        <div class="col">
+            <div class="card h-100 rounded-3">
                 <img src="{% static img_path %}" class="card-img-top img-card-size" alt="{{item.1}}">
                 <div class="card-body text-center">
                     <h5 class="card-title">{{item.0}}</h5>
                 </div>
             </div>
+        </div>
         {% endwith %}
-    {% endfor %}
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
