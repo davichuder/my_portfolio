@@ -36,5 +36,4 @@ function verifyThemeCookie() {
     if (theme === "light") { lightTheme(); }
     else if (theme === "dark") { darkTheme(); }
     else { darkTheme(); }
-    console.log("papa")
 }

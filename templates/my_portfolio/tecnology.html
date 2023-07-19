@@ -3,20 +3,24 @@
 
 {% block titulo_ventana %}David Rolón{% endblock %}
 
+{% block adicional_style %}
+<link rel="stylesheet" type="text/css" href='{% static "css/tecnology_cards.css" %}'>
+{% endblock %}
+
 {% block main %}
 <div class="container py-5" id="habilidades">
     <div class="row row-cols-1 row-cols-md-4 g-4">
         {% for item in tecnologies %}
-        {% with 'img/tecnology/'|add:item.1 as img_path %}
         <div class="col">
             <div class="card h-100 rounded-3">
+                {% with 'img/tecnology/'|add:item.1 as img_path %}
                 <img src="{% static img_path %}" class="card-img-top img-card-size" alt="{{item.1}}">
+                {% endwith %}
                 <div class="card-body text-center">
                     <h5 class="card-title">{{item.0}}</h5>
                 </div>
             </div>
-        </div>
-        {% endwith %}
+        </div>        
         {% endfor %}
     </div>
 </div>

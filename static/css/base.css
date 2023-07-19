@@ -18,30 +18,3 @@ body {
 .lh-lg {
     font-size: 1.125rem;
 }
-
-[data-bs-theme="dark"] .card {
-    border: 1px solid #fff;
-    background-color: rgb(255, 255, 255, 0.1);
-}
-
-[data-bs-theme="light"] .card {
-    border: 1px solid rgb(33,37,41);
-}
-
-.card {
-    transition: all 0.3s;
-    text-align: center;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.img-card-size {
-    aspect-ratio: 3/2;
-    height: 5rem;
-    object-fit: contain;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
-    margin-top: 0.5rem;    
-}
