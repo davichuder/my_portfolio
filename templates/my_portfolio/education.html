@@ -1,0 +1,26 @@
+{% extends "./fragments/base.html" %}
+{% load static %}
+
+{% block titulo_ventana %}David Rolón{% endblock %}
+
+{% block main %}
+<div class="container py-5" id="formacion">
+  <h2 class="mb-4">Formación</h2>
+  <div class="timeline">
+    {% for item in formacion %}
+    {% with 'img/certificados/'|add:item.4 as img_path %}
+    <div class="timeline-item {% cycle 'left', 'right' %}">
+      <div class="timeline-content">
+        <img src="{% static img_path %}" class="certificado-img" alt="{{item.0}}">
+        <h5 class="timeline-title">{{item.0}}</h5>
+        <p class="timeline-dates">{{item.1}} - {{item.2}}</p>
+        <p class="timeline-location">{{item.3}}</p>
+        <p class="timeline-description">{{item.5}}</p>
+      </div>
+    </div>
+    {% endwith %}
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}
