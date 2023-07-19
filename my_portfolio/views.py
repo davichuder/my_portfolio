@@ -8,4 +8,8 @@ def sobre_mi(request, template_name='my_portfolio/sobre_mi.html'):
     return render(request, template_name)
 
 def tecnologias(request, template_name='my_portfolio/tecnologias.html'):
-    return render(request, template_name)
+    titles = ["Bootstrap", "CSS", "Django", "GIT", "GitHub", "HTML", "JAVA", "Javascript", "MongoDB", "MySQL", "PostgreSQL", "PowerBI",  "ReactJs", "Spring", "SQLite"]
+    images = [f"{nombre.lower()}.svg" for nombre in titles]
+    tecnologias = [item for item in zip(titles, images)]
+    context = {"tecnologias": tecnologias}
+    return render(request, template_name, context=context)

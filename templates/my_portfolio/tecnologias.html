@@ -6,30 +6,16 @@
 {% block main %}
 <div class="container py-5" id="habilidades">
     <div class="card-group habilidades-list">
+    {% for item in tecnologias %}
+        {% with 'img/tecnology/'|add:item.1 as img_path %}
         <div class="card">
-            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">
-                <img src="{% static 'img/tecnology/html.svg' %}" class="card-img-top img-card-size" alt="HTML">
+                <img src="{% static img_path %}" class="card-img-top img-card-size" alt="{{item.1}}">
                 <div class="card-body text-center">
-                    <h5 class="card-title">HTML</h5>
+                    <h5 class="card-title">{{item.0}}</h5>
                 </div>
-            </a>
-        </div>
-        <div class="card">
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer">
-                <img src="{% static 'img/tecnology/css.svg' %}" class="card-img-top img-card-size" alt="CSS">
-                <div class="card-body text-center">
-                    <h5 class="card-title">CSS</h5>
-                </div>
-            </a>
-        </div>
-        <div class="card">
-            <a href="https://www.python.org/" target="_blank" rel="noopener noreferrer">
-                <img src="{% static 'img/tecnology/python.svg' %}" class="card-img-top img-card-size" alt="Python">
-                <div class="card-body text-center">
-                    <h5 class="card-title">Python</h5>
-                </div>
-            </a>
-        </div>
+            </div>
+        {% endwith %}
+    {% endfor %}
     </div>
 </div>
 {% endblock %}
