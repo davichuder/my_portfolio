@@ -2,6 +2,10 @@ function setThemeCookie(name) {
     document.cookie = `theme=${name}`;
 }
 
+function getThemeCookie() {
+    return getCookies().theme;
+}
+
 const lightTheme = () => {
     document.querySelector("body").setAttribute("data-bs-theme", "light");
     document.querySelector("#icon-theme").setAttribute("class", "bi bi-sun-fill");
@@ -14,17 +18,6 @@ const darkTheme = () => {
     document.querySelector("#icon-theme").setAttribute("class", "bi bi-moon-fill");
     document.querySelector("#icon-logo").setAttribute("class", "icon-logo-light");
     setThemeCookie("dark");
-}
-
-function getCookies() {
-    return document.cookie
-        .split(';')
-        .map(cookie => cookie.split('='))
-        .reduce((accumulator, [key, value]) => ({ ...accumulator, [key.trim()]: decodeURIComponent(value) }), {});
-}
-
-function getThemeCookie() {
-    return getCookies().theme;
 }
 
 const switchTheme = () => {

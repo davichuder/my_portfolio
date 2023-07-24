@@ -19,7 +19,7 @@
       {% with 'img/certificates/'|add:item.4 as img_path %}
       <img class="img-fluid rounded" src="{% static img_path %}"></img>
       {% endwith %}
-      <h4 class="timeline-title my-0">{{ item.0 }}</h4>
+      <h4 class="timeline-title my-0 text-wrap">{{ item.0 }}</h4>
       <h5 class="timeline-subtitle">{{ item.3 }}</h5>
       <div>
         {% for badge in item.5 %}
