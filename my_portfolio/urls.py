@@ -24,5 +24,9 @@ urlpatterns = [
     path('', views.index, name="index"),
     path('about_me', views.about_me, name="about_me"),
     path('tecnology', views.tecnology, name="tecnology"),
+    path('experience', views.experience, name="experience"),
+    path('projects', views.projects, name="projects"),
     path('education', views.education, name="education"),
+    path('hobbies', views.hobbies, name="hobbies"),
+    path('contact_me', views.contact_me, name="contact_me"),
 ]

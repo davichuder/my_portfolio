@@ -1,0 +1,33 @@
+{% extends "./fragments/base.html" %}
+{% load static %}
+
+{% block titulo_ventana %}David Rolón{% endblock %}
+
+{% block adicional_style %}
+<link rel="stylesheet" type="text/css" href='{% static "css/experience_timeline.css" %}'>
+{% endblock %}
+
+{% block main %}
+<div class="container">
+  <div class="main-timeline">
+    {% for item in experiences %}
+    <div class="timeline">
+      <div class="icon"></div>
+      <div class="date-content">
+        <div class="date-outer">
+          <span class="date">
+            <span class="month">AAA</span>
+            <span class="year">{{item.2}}</span>
+          </span>
+        </div>
+      </div>
+      <div class="timeline-content">
+        <h5 class="title">{{item.0}}</h5>
+        <h5 class="subtitle">{{item.1}}</h5>
+        <p class="description">{{item.4}}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
