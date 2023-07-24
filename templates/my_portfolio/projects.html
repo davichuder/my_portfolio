@@ -3,6 +3,32 @@
 
 {% block titulo_ventana %}David Rolón{% endblock %}
 
+{% block adicional_style %}
+<link rel="stylesheet" type="text/css" href='{% static "css/projects.css" %}'>
+{% endblock %}
+
 {% block main %}
-Proyectos
+<div class="container">
+  <div class="row">
+    {% for item in projects %}
+    <div class="card-wrapper col-lg-4 col-md-6 col-xs-12">
+      <div class="card">
+        <div class="card-img-wrapper">
+          <img class="card-img-top"
+            src="https://www.fortech.ro/wp-content/uploads/2018/12/DigitalCommerceSoftwarePlatform-e1554472385425.jpg"
+            alt="Card image cap">
+        </div>
+        <div class="card-body text-center">
+          <h5 class="card-title">Special title treatment Special</h5>
+          <div class="card-content">
+            <p class="card-text">With supporting text below as a natural lead-in to additional content. With supporting
+              text below as a natural</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
 {% endblock %}

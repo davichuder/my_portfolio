@@ -35,7 +35,9 @@ def experience(request, template_name='my_portfolio/experience.html'):
 
 
 def projects(request, template_name='my_portfolio/projects.html'):
-    return render(request, template_name)
+    projects = range(10)
+    context = {"projects": projects}
+    return render(request, template_name, context=context)
 
 
 def education(request, template_name='my_portfolio/education.html'):
