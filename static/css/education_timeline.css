@@ -14,7 +14,7 @@
   --timeline-card-bg-light: #9b9b9b;
   --timeline-title-light: #212529;
   --timeline-subtitle-light: #212529;
-  --timeline-bagde-text-light: #212529; 
+  --timeline-bagde-text-light: #212529;
   --timeline-bagde-bg-light: #fff;
 }
 
@@ -22,19 +22,24 @@
   .timeline:after {
     border-right: 2px dashed var(--timeline-dark);
   }
+
   .timeline-row .timeline-content:before {
     background: var(--timeline-dark);
     border: 2px dashed var(--timeline-point-dark);
   }
+
   .timeline-row .timeline-time {
     color: var(--timeline-date-dark)
   }
+
   .timeline-row .timeline-content {
     background: var(--timeline-card-bg-dark);
   }
+
   .timeline-row .timeline-content:after {
     background: var(--timeline-card-bg-dark);
   }
+
   /* .timeline-row .timeline-content i {
     background: yellow;
   } */
@@ -42,9 +47,11 @@
     color: var(--timeline-bagde-text-dark);
     background: Var(--timeline-bagde-bg-dark);
   }
+
   .timeline-title {
     color: var(--timeline-title-dark);
   }
+
   .timeline-subtitle {
     color: var(--timeline-subtitle-dark);
   }
@@ -54,19 +61,24 @@
   .timeline:after {
     border-right: 2px dashed var(--timeline-light);
   }
+
   .timeline-row .timeline-content:before {
     background: var(--timeline-light);
     border: 2px dashed var(--timeline-point-light);
   }
+
   .timeline-row .timeline-time {
     color: var(--timeline-date-light)
   }
+
   .timeline-row .timeline-content {
     background: var(--timeline-card-bg-light);
   }
+
   .timeline-row .timeline-content:after {
     background: var(--timeline-card-bg-light);
   }
+
   /* .timeline-row .timeline-content i {
     background: green;
   } */
@@ -74,9 +86,11 @@
     color: var(--timeline-bagde-text-light);
     background: Var(--timeline-bagde-bg-light);
   }
+
   .timeline-title {
     color: var(--timeline-title-light);
   }
+
   .timeline-subtitle {
     color: var(--timeline-subtitle-light);
   }
@@ -288,4 +302,12 @@
   .timeline .timeline-row:nth-child(even) .timeline-content:after {
     display: none;
   }
+}
+
+.timeline-row:nth-child(odd) .timeline-content:hover {
+  box-shadow: -5px 5px 5px 5px #918991;
+}
+
+.timeline-row:nth-child(even) .timeline-content:hover {
+  box-shadow: 5px 5px 5px 5px #918991;
 }

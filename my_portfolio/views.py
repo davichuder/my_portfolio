@@ -27,7 +27,7 @@ def tecnology(request, template_name='my_portfolio/tecnology.html'):
 
 def experience(request, template_name='my_portfolio/experience.html'):
     lore_ipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur ex sit amet massa scelerisque scelerisque. Aliquam erat volutpat. Aenean interdum finibus efficitur. Praesent dapibus dolor felis, eu ultrices elit molestie."
-    experiences = [("Técnico de mantenimiento", "Saetech SA", "Diciembre 2022", "Actualidad", lore_ipsum),
+    experiences = [("Técnico de mantenimiento", "Saetech SA", "2022 Dic", "Actualidad", lore_ipsum),
                    ("Técnico electronico", "Prexey SA", "9999", "Diciembre 2022", lore_ipsum),
                    ("Oficial electricista", "INGESA", "9999", "9999", lore_ipsum),]
     context = {"experiences": experiences}
@@ -53,11 +53,6 @@ def education(request, template_name='my_portfolio/education.html'):
                  ("Técnico Electromécanico", "2008", "2014", "Instituto de Educación Técnica Manuel Belgrano", "tecnico_electromecanico.jpg", ["Microsoft Office", "Electricidad", "Carpintería", "Mécanica", "Diseño de planos"])]
     context = {"education": education}
     return render(request, template_name, context=context)
-
-
-def hobbies(request, template_name='my_portfolio/hobbies.html'):
-    return render(request, template_name)
-
 
 def contact_me(request, template_name='my_portfolio/contact_me.html'):
     return render(request, template_name)
