@@ -63,7 +63,7 @@ def mail_test():
             port=settings.EMAIL_PORT,  
             username=settings.EMAIL_HOST_USER, 
             password=settings.EMAIL_HOST_PASSWORD, 
-            use_tls=settings.EMAIL_USE_TLS  
+            use_tls=settings.EMAIL_USE_TLS
        ) as connection:  
            subject = "Prueba"
            email_from = settings.EMAIL_HOST_USER  
@@ -72,5 +72,5 @@ def mail_test():
            EmailMessage(subject, message, email_from, recipient_list, connection=connection).send()
 
 def contact_me(request, template_name='my_portfolio/contact_me.html'):
-    mail_test()
+    # mail_test()
     return render(request, template_name)
