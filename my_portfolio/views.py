@@ -35,7 +35,12 @@ def experience(request, template_name='my_portfolio/experience.html'):
 
 
 def projects(request, template_name='my_portfolio/projects.html'):
-    projects = range(10)
+    texto = "With supporting text below as a natural lead-in to additional content. With supporting text below as a natural"
+    projects = [("Mi Portafolio", "programa_one.png", texto, "https://github.com/davichuder/my_portfolio", "https://www.google.com"),
+                ("API Rest", "fullstack_web_developer.png", texto, "https://github.com/davichuder/Challenge-4---Foro-Alura"),
+                ("VitaliAPP", "dispositivos_Inteligentes.jpg", texto, "github.com", "google.com"),
+                ("Hotel Alura", "programa_one.png", texto, "github.com"),
+                ("Desencriptador", "programa_one.png", texto, "github.com", "google.com"),]
     context = {"projects": projects}
     return render(request, template_name, context=context)
 

@@ -306,8 +306,10 @@
 
 .timeline-row:nth-child(odd) .timeline-content:hover {
   box-shadow: -5px 5px 5px 5px #918991;
+  transform: scale(1.02) translate(-1%);
 }
 
 .timeline-row:nth-child(even) .timeline-content:hover {
   box-shadow: 5px 5px 5px 5px #918991;
+  transform: scale(1.02) translate(1.25%);
 }

@@ -102,7 +102,3 @@
 .card:hover .card-content {
   bottom: 0;
 }
-
-.row {
-  padding-left: calc(var(--bs-gutter-x) * 1);
-}
