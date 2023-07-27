@@ -27,5 +27,6 @@ urlpatterns = [
     path('experience', views.experience, name="experience"),
     path('projects', views.projects, name="projects"),
     path('education', views.education, name="education"),
-    path('contact_me', views.contact_me, name="contact_me"),
+    path('contact_me', views.ContactView.as_view(), name="contact_me"),
+    path('success', views.ContactSuccessView.as_view(), name="success"),
 ]

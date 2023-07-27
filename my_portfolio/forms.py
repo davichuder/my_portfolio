@@ -1,19 +1,15 @@
 from django import forms
 from django.conf import settings
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage, get_connection
+
 
 class ContactForm(forms.Form):
-    name = forms.CharField(max_length=120)
-    email = forms.EmailField()
-    inquiry = forms.CharField(max_length=70)
-    message = forms.CharField(widget=forms.Textarea)
+    name = forms.CharField(max_length=120, label="Nombre")
+    email = forms.EmailField(label="Email")
+    inquiry = forms.CharField(max_length=70, label="Asunto")
+    message = forms.CharField(widget=forms.Textarea, label="Mensaje")
 
     def get_info(self):
-        """
-        Method that returns formatted information
-        :return: subject, msg
-        """
-        # Cleaned data
         cl_data = super().clean()
 
         name = cl_data.get('name').strip()
@@ -29,10 +25,16 @@ class ContactForm(forms.Form):
     def send(self):
         subject, msg = self.get_info()
 
-        send_mail(
-            subject=subject,
-            message=msg,
-            from_email=settings.EMAIL_HOST_USER,
-            recipient_list=[settings.RECIPIENT_ADDRESS],
-            use_tls=settings.EMAIL_USE_TLS
-        )
+        with get_connection(
+                host=settings.EMAIL_HOST,
+                port=settings.EMAIL_PORT,
+                username=settings.EMAIL_HOST_USER,
+                password=settings.EMAIL_HOST_PASSWORD,
+                use_tls=settings.EMAIL_USE_TLS
+        ) as connection:
+            subject = subject
+            email_from = settings.EMAIL_HOST_USER
+            recipient_list = [settings.EMAIL_HOST_USER]
+            message = msg
+            EmailMessage(subject, message, email_from,
+                         recipient_list, connection=connection).send()

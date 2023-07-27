@@ -1,5 +1,6 @@
 {% extends "./fragments/base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block titulo_ventana %}David Rolón{% endblock %}
 
@@ -8,5 +9,16 @@
 {% endblock %}
 
 {% block main %}
-Contactame
+<div class="mx-auto my-4 text-center">
+  <h1>Contáctame</h1>
+</div>
+<div class="container">
+  <form action="" method="post">
+      {% csrf_token %}
+      {{ form | crispy }}
+    <div class="text-center">
+      <button class="btn btn-outline-primary my-3" type="submit">Enviar</button>
+    </div>
+  </form>
+</div>
 {% endblock %}

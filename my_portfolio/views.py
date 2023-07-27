@@ -1,5 +1,7 @@
-from django.shortcuts import render, redirect
-from django.http import HttpResponse, Http404, JsonResponse
+from django.shortcuts import render
+from django.views.generic import FormView, TemplateView
+from django.urls import reverse_lazy
+from .forms import ContactForm
 
 
 def cookies_policy(request, template_name='my_portfolio/cookies_policy.html'):
@@ -59,23 +61,14 @@ def education(request, template_name='my_portfolio/education.html'):
     context = {"education": education}
     return render(request, template_name, context=context)
 
-def mail_test():
-    from django.core.mail import EmailMessage, get_connection
-    from django.conf import settings
+class ContactView(FormView):
+    template_name = 'my_portfolio/contact_me.html'
+    form_class = ContactForm
+    success_url = reverse_lazy('success')
 
-    with get_connection(  
-           host=settings.EMAIL_HOST, 
-            port=settings.EMAIL_PORT,  
-            username=settings.EMAIL_HOST_USER, 
-            password=settings.EMAIL_HOST_PASSWORD, 
-            use_tls=settings.EMAIL_USE_TLS
-       ) as connection:  
-           subject = "Prueba"
-           email_from = settings.EMAIL_HOST_USER  
-           recipient_list = [settings.EMAIL_HOST_USER]  
-           message = "prueba" 
-           EmailMessage(subject, message, email_from, recipient_list, connection=connection).send()
+    def form_valid(self, form):
+        form.send()
+        return super().form_valid(form)
 
-def contact_me(request, template_name='my_portfolio/contact_me.html'):
-    # mail_test()
-    return render(request, template_name)
+class ContactSuccessView(TemplateView):
+    template_name = 'my_portfolio/success.html'

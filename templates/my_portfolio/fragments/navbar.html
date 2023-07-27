@@ -16,7 +16,7 @@
             <li class="nav-item"><a href="/projects" class="nav-link">Proyectos</a></li>
             <li class="nav-item"><a href="/education" class="nav-link">Formación</a></li>
             <li class="nav-item"><a href='{% static "file/cv_es.pdf" %}' class="nav-link" target="_blank">Curriculum</a></li>
-            <li class="nav-item"><a href="/contact_me" class="nav-link">Contacto</a></li>
+            <li class="nav-item"><a href="{% url 'contact_me' %}" class="nav-link">Contáctame</a></li>
             <li class="nav-item">
               <div class="dropdown">
                 <a class="dropdown-toggle nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-globe"></i> <i class="bi bi-translate"></i></a>
