@@ -18,3 +18,7 @@ body {
 .lh-lg {
     font-size: 1.125rem;
 }
+
+.margin-25vh {
+    margin-top: 25vh;
+}

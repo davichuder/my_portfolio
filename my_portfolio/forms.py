@@ -32,9 +32,6 @@ class ContactForm(forms.Form):
                 password=settings.EMAIL_HOST_PASSWORD,
                 use_tls=settings.EMAIL_USE_TLS
         ) as connection:
-            subject = subject
             email_from = settings.EMAIL_HOST_USER
             recipient_list = [settings.EMAIL_HOST_USER]
-            message = msg
-            EmailMessage(subject, message, email_from,
-                         recipient_list, connection=connection).send()
+            EmailMessage(subject, msg, email_from, recipient_list, connection=connection).send()

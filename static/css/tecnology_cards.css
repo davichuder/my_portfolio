@@ -1,6 +1,6 @@
 [data-bs-theme="dark"] .card {
   border: 1px solid #fff;
-  background-color: rgb(255, 255, 255, 0.1);
+  background-color: var(--bs-secondary-bg);
 }
 
 [data-bs-theme="light"] .card {
