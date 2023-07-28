@@ -13,11 +13,11 @@
         {% for item in tecnologies %}
         <div class="col">
             <div class="card h-100 rounded-3">
-                {% with 'img/tecnology/'|add:item.1 as img_path %}
-                <img src="{% static img_path %}" class="card-img-top img-card-size" alt="{{item.1}}">
+                {% with 'img/tecnology/'|add:item.img_name as img_path %}
+                <img src="{% static img_path %}" class="card-img-top img-card-size" alt="{{item.img_name}}">
                 {% endwith %}
                 <div class="card-body text-center">
-                    <h5 class="card-title">{{item.0}}</h5>
+                    <h5 class="card-title">{{item.name}}</h5>
                 </div>
             </div>
         </div>        
