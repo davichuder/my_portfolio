@@ -5,8 +5,8 @@
   --timeline-card-bg-dark: #9b9b9b;
   --timeline-title-dark: #212529;
   --timeline-subtitle-dark: #212529;
-  --timeline-bagde-text-dark: #fff;
-  --timeline-bagde-bg-dark: #2B3035;
+  --timeline-badge-text-dark: #fff;
+  --timeline-badge-bg-dark: #2B3035;
 
   --timeline-light: #212529;
   --timeline-point-light: #212529;
@@ -14,8 +14,8 @@
   --timeline-card-bg-light: #9b9b9b;
   --timeline-title-light: #212529;
   --timeline-subtitle-light: #212529;
-  --timeline-bagde-text-light: #212529;
-  --timeline-bagde-bg-light: #fff;
+  --timeline-badge-text-light: #212529;
+  --timeline-badge-bg-light: #fff;
 }
 
 [data-bs-theme="dark"] {
@@ -44,8 +44,8 @@
     background: yellow;
   } */
   .timeline-row .timeline-content .badge {
-    color: var(--timeline-bagde-text-dark);
-    background: Var(--timeline-bagde-bg-dark);
+    color: var(--timeline-badge-text-dark);
+    background: Var(--timeline-badge-bg-dark);
   }
 
   .timeline-title {
@@ -83,8 +83,8 @@
     background: green;
   } */
   .timeline-row .timeline-content .badge {
-    color: var(--timeline-bagde-text-light);
-    background: Var(--timeline-bagde-bg-light);
+    color: var(--timeline-badge-text-light);
+    background: Var(--timeline-badge-bg-light);
   }
 
   .timeline-title {

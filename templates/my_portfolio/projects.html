@@ -14,11 +14,11 @@
     <div class="card-wrapper col-lg-4 col-md-6 col-xs-12">
       <div class="card text-center">
         <div class="card-img-wrapper">
-          {% with 'img/certificates/'|add:item.img_name as img_path %}
+          {% with 'img/projects/'|add:item.img_name as img_path %}
           <img class="card-img-top" src="{% static img_path %}" alt="Card image cap">
           {% endwith %}
         </div>
-        <div class="card-body">
+        <div class="card-body row justify-content-between">
           <h5 class="card-title">{{item.name}}</h5>
           <div class="card-content">
             <p class="card-text">{{item.description}}</p>
@@ -32,6 +32,11 @@
             {% if item.url_demo%}
             <a href="{{item.url_demo}}" class="btn btn-dark" target="_blank">Demo</a>
             {% endif %}
+            <div class="big-badge">
+              {% for badge in item.tags %}
+              <span class="badge badge-pill">{{ badge }}</span>
+              {% endfor %}
+            </div>
           </div>
         </div>
       </div>
@@ -39,4 +44,6 @@
     {% endfor %}
   </div>
 </div>
+<a href="/tecnology" class="btn-anterior-flotante">Anterior</a>
+<a href="/education" class="btn-siguiente-flotante">Siguiente</a>
 {% endblock %}

@@ -24,10 +24,12 @@
       <div class="timeline-content">
         <h5 class="title">{{item.job}}</h5>
         <h5 class="subtitle">{{item.company}}</h5>
-        <p class="description">{{item.description}}</p>
+        <p class="description">{{item.description|linebreaks}}</p>
       </div>
     </div>
     {% endfor %}
   </div>
 </div>
+<a href="/education" class="btn-anterior-flotante">Anterior</a>
+<a href="/contact_me" class="btn-siguiente-flotante">Siguiente</a>
 {% endblock %}

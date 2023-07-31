@@ -1,0 +1,11 @@
+.about-me-content {
+  border-radius: 5px;
+}
+
+.about-me-content h2 {
+  color: #007bff;
+}
+
+.about-me-content p {
+  margin-bottom: 15px;
+}

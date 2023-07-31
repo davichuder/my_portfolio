@@ -12,15 +12,15 @@
   {% for item in education %}
   <div class="timeline-row">
     <div class="timeline-time">
-      {{ item.name }}
-      <small>{{ item.company }}</small>
+      {{ item.date_end }}
+      <small>{{ item.date_start }}</small>
     </div>
     <div class="timeline-content">
       {% with 'img/certificates/'|add:item.img_name as img_path %}
       <img class="img-fluid rounded" src="{% static img_path %}"></img>
       {% endwith %}
-      <h4 class="timeline-title my-0 text-wrap">{{ item.date_end }}</h4>
-      <h5 class="timeline-subtitle">{{ item.date_start }}</h5>
+      <h4 class="timeline-title my-0 text-wrap">{{ item.name }}</h4>
+      <h5 class="timeline-subtitle">{{ item.company }}</h5>
       <div>
         {% for badge in item.tags %}
         <span class="badge badge-pill">{{ badge }}</span>
@@ -30,4 +30,6 @@
   </div>
   {% endfor %}
 </div>
+<a href="/projects" class="btn-anterior-flotante">Anterior</a>
+<a href="/experience" class="btn-siguiente-flotante">Siguiente</a>
 {% endblock %}
