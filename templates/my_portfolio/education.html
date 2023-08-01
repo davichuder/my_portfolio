@@ -8,7 +8,7 @@
 {% endblock %}
 
 {% block main %}
-<div class="timeline">
+<div class="timeline py-5">
   {% for item in education %}
   <div class="timeline-row">
     <div class="timeline-time">
@@ -29,7 +29,9 @@
     </div>
   </div>
   {% endfor %}
+  <div class="d-flex justify-content-between">
+    <a href="/projects" class="btn-anterior-flotante">Anterior</a>
+    <a href="/experience" class="btn-siguiente-flotante">Siguiente</a>
+  </div>
 </div>
-<a href="/projects" class="btn-anterior-flotante">Anterior</a>
-<a href="/experience" class="btn-siguiente-flotante">Siguiente</a>
 {% endblock %}

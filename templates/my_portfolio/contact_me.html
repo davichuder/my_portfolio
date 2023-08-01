@@ -5,7 +5,7 @@
 {% block titulo_ventana %}David Rolón{% endblock %}
 
 {% block adicional_style %}
-  <link rel="stylesheet" type="text/css" href='{% static "css/contact_me.css" %}'>
+<link rel="stylesheet" type="text/css" href='{% static "css/contact_me.css" %}'>
 {% endblock %}
 
 {% block main %}
@@ -14,12 +14,14 @@
 </div>
 <div class="d-flex justify-content-center">
   <form action="" method="post" id="post-form">
-      {% csrf_token %}
-      {{ form | crispy }}
+    {% csrf_token %}
+    {{ form | crispy }}
     <div class="text-center">
       <button class="btn btn-outline-primary my-3" type="submit">Enviar</button>
     </div>
   </form>
 </div>
-<a href="/experience" class="btn-anterior-flotante">Anterior</a>
+<div class="d-flex justify-content-start ms-3">
+  <a href="/experience" class="btn-anterior-flotante">Anterior</a>
+</div>
 {% endblock %}
