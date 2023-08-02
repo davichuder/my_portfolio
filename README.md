@@ -5,8 +5,10 @@ Quise hacer mi portafolio personal utilizando algunos de los conocimientos adqui
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
+|     |     |     |
+| --- | --- | --- |
+| ![Index](README/img/1.jpg) | ![Perfil Paciente](README/img/2.jpg) | ![Perfil Profesional](README/img/3.jpg) |
+| ![Profesionales](README/img/4.jpg) | ![Reservar Turno](README/img/5.jpg) | ![Turnos](README/img/6.jpg) |
 
 ## Tech Stack
 
@@ -15,10 +17,19 @@ Quise hacer mi portafolio personal utilizando algunos de los conocimientos adqui
 **Server:** Python, DJango
 
 
+## Features
+
+- Modo oscuro y  claro
+- Modificación rapida desde el panel de administrador
+- Responsivo
+- Función contactame mediante envio de email
+
+
 ## Demo
 
-Proximamente demo online del mismo
+Le dejo para que disfruten el deploy del mi portfolio
 
+[David Rolón - Portfolio](http://rolondavid.pythonanywhere.com/)
 
 ## Instalación
 
@@ -54,6 +65,14 @@ Se recomienda generar contraseñas de aplicaciones por motivos de seguridad, dej
 Ademas dejo el link para sabes que puerto y url de servidor son los mejores para usted
 
 [Host and Port Table](https://apps.mexagon.net/clientes/knowledgebase/104/iCual-es-el-Host-y-el-puerto-SMTP-de-mi-servidor-de-Mail-.html)
+
+Para poder agregar, eliminar o modificar las tecnologias, projectos, formación o experiencia desde el panel de administrador de Django es necesario crear un usuario con el siguiente comando:
+
+```bash
+python .\manage.py createsuperuser
+```
+
+Y completar con los datos requeridos
 ## Correr localmente
 Para correr el proyecto de forma local, ejecute el siguiente comando en la carpeta raiz del proyecto
 
@@ -67,4 +86,16 @@ http://localhost:8000/ o http://127.0.0.1:8000/
 
 ## Deployment
 
-Proximamente explicacion del Deployment
+En caso de querer realizar un deploy tiene que tener en cuenta algunas consideraciones:
+
+En settings.py debera desactivar el modo depuración
+
+```bash
+DEBUG = False
+```
+
+Ademas debera configurar la lista donde se debe indicar las direcciones de IP o dominios en los que se provee la aplicación web en el ambiente de producción en settings.py
+
+```bash
+ALLOWED_HOSTS = []
+```
