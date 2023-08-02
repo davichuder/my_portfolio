@@ -99,3 +99,9 @@ Ademas debera configurar la lista donde se debe indicar las direcciones de IP o 
 ```bash
 ALLOWED_HOSTS = []
 ```
+
+Tambien acuerdese de configurar la carpeta root dpara los archivos estaticos
+
+```bash
+STATIC_ROOT = 'your_location'
+```
