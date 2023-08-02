@@ -76,4 +76,8 @@ body {
         position: static;
         font-size: 14px;
     }
+
+    body {
+        margin-bottom: 85px;
+    }
 }
