@@ -8,7 +8,7 @@
 {% endblock %}
 
 {% block main %}
-<div class="container py-5">
+<div class="container pb-5 pt-3">
   <div class="main-timeline">
     {% for item in experiences %}
     <div class="timeline">
@@ -22,15 +22,15 @@
         </div>
       </div>
       <div class="timeline-content">
-        <h5 class="title">{{item.job}}</h5>
-        <h5 class="subtitle">{{item.company}}</h5>
+        <h4 class="title text-decoration-underline">{{item.job}}</h4>
+        <h5 class="subtitle fst-italic">{{item.company}}</h5>
         <p class="description">{{item.description|linebreaks}}</p>
       </div>
     </div>
     {% endfor %}
     <div class="d-flex justify-content-around">
-      <a href="/education" class="btn-anterior-flotante">Anterior</a>
-      <a href="/contact_me" class="btn-siguiente-flotante">Siguiente</a>
+      <a href="/education" class="btn-anterior-flotante text-decoration-none">Anterior</a>
+      <a href="/contact_me" class="btn-siguiente-flotante text-decoration-none">Siguiente</a>
     </div>
   </div>
 </div>

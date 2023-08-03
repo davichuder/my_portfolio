@@ -158,7 +158,6 @@
 }
 
 .main-timeline .title {
-  font-size: 19px;
   font-weight: 700;
   line-height: 24px;
   margin: 0 0 15px 0;
@@ -192,10 +191,6 @@
 
   .main-timeline .timeline-content {
     padding: 10px 0 10px 30px;
-  }
-
-  .main-timeline .title {
-    font-size: 17px;
   }
 
   .main-timeline .timeline:nth-child(2n) .timeline-content {
