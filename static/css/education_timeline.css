@@ -40,9 +40,6 @@
     background: var(--timeline-card-bg-dark);
   }
 
-  /* .timeline-row .timeline-content i {
-    background: yellow;
-  } */
   .timeline-row .timeline-content .badge {
     color: var(--timeline-badge-text-dark);
     background: Var(--timeline-badge-bg-dark);
@@ -79,9 +76,6 @@
     background: var(--timeline-card-bg-light);
   }
 
-  /* .timeline-row .timeline-content i {
-    background: green;
-  } */
   .timeline-row .timeline-content .badge {
     color: var(--timeline-badge-text-light);
     background: Var(--timeline-badge-bg-light);
@@ -249,6 +243,8 @@
 @media (max-width: 992px) {
   .timeline {
     padding: 15px;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
   }
 
   .timeline:after {

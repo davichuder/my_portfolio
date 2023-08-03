@@ -127,3 +127,9 @@
 .big-badge {
   margin-top: 20px;
 }
+
+@media only screen and (max-width: 1200px) {
+  .card:hover .card-body {
+    height: 100%;
+  }
+}
