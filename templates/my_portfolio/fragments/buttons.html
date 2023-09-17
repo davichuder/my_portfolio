@@ -1,0 +1,12 @@
+<section class="previus_next_buttons text-center justify-content-evenly">
+  {% if page_flow.previous_url %}
+  <div class="previous_button ms-3 px-3 py-2 rounded-pill bg-body-tertiary border border-3">
+    <a class="btn" href="{% url page_flow.previous_url %}">Anterior</a>
+  </div>
+  {% endif %}
+  {% if page_flow.next_url %}
+  <div class="next_button me-3 px-3 py-2 rounded-pill bg-body-tertiary border border-3">
+    <a class="btn" href="{% url page_flow.next_url %}">Siguiente</a>
+  </div>
+  {% endif %}
+</section>

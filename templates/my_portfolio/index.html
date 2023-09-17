@@ -1,23 +1,15 @@
-{% extends "./fragments/base.html" %}
+{% extends './fragments/base.html' %}
 {% load static %}
 
-{% block titulo_ventana %}David Rolón{% endblock %}
-
 {% block main %}
-<div class="container text-center pb-3 mb-2">
-    <h1 class="display-4">¡BIENVENIDO!</h1>
-    <img src="{% static 'img/cv.jpg' %}" alt="Foto de David Rolón" class="img-fluid rounded-circle my-3 border border-5"
-        style="width: 200px; height: 200px;">
-    <h2 class="mb-4">Me llamo David Rolón</h2>
+  <section class="intro d-flex flex-column justify-content-evenly text-center align-items-center px-5">
+    <h2 class="display-4 text-uppercase">!Bienvenido!</h2>
+    <img src="{% static 'img/cv.jpg' %}" alt="Foto de David Rolón" class="rounded-circle my-3 border border-5 img-portrait" />
+    <h2 class="display-5">Me llamo David Rolón.</h2>
     <p>En este portafolio podrás conocer más sobre mí, mi trayectoria profesional y mis habilidades.</p>
-    <p>Verás algunos de los proyectos que he realizado, donde aplico mis habilidades y conocimientos en diferentes áreas
-        y tecnologías.<br>
-        Desde la creación de páginas web dinámicas, interactivas y atractivas, hasta la extracción de información
-        valiosa de grandes volúmenes de datos.</p>
+    <p>Vas a poder conocer algunos de los proyectos que he realizado, donde aplico mis habilidades y conocimientos en diferentes áreas y tecnologías.</p>
+    <p>Desde la creación de páginas web dinámicas, interactivas y atractivas, hasta la extracción de información valiosa de grandes volúmenes de datos.</p>
+    <p>Puedes seguir la visita guiada, o ir directamente a la sección que más te interese.</p>
     <p>Espero que disfrutes navegando por mi portafolio, y que esta plataforma te permita conocerme mejor.</p>
-    <p class="fst-italic">Gracias por visitar mi portafolio personal.</p>
-    <div class="d-flex justify-content-end">
-        <a href="/about_me" class="btn-siguiente-flotante text-decoration-none">Siguiente</a>
-    </div>
-</div>
+  </section>
 {% endblock %}

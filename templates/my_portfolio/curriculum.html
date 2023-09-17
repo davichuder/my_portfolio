@@ -1,0 +1,21 @@
+{% extends './fragments/base.html' %}
+{% load static %}
+
+{% block main %}
+  <section class="curriculum">
+    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+      {% for item in curriculums %}
+        <li class="nav-item" role="presentation">
+          <button class="nav-link {% if forloop.counter == 1 %}active{% endif %}" id="{{item.name}}-tab" data-bs-toggle="tab" data-bs-target="#{{item.name}}" type="button" role="tab" aria-controls="{{item.name}}-tab-pane" aria-selected="true">{{item.name}}</button>
+        </li>
+      {% endfor %}
+    </ul>
+    <div class="tab-content" id="myTabContent">
+        {% for item in curriculums %}
+      <div class="tab-pane fade show {% if forloop.counter == 1 %}active{% endif %}" id="{{item.name}}" role="tabpanel" aria-labelledby="{{item.name}}-tab">
+        <iframe src="{{item.url}}" allow="autoplay"></iframe>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}

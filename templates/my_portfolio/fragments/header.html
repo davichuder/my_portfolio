@@ -1,0 +1,40 @@
+{% load static %}
+
+<header>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <div class="container-fluid ms-0">
+        <a class="navbar-brand" href="/">
+          <img class="img-brand" src='{% static "img/logo/logo_light.svg" %}' id="icon-logo" alt="Logo"/>
+          <span class="{% if page_flow.url == "index"%}current-page{% endif %}">David Rolón</span>
+        </a>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-around container-fluid text-center">
+          {% for item in pages_list%}
+          <li class="nav-item">
+            <a class='nav-link active {% if page_flow.url == item.url %}current-page{% endif %}' aria-current="page" href="{{item.url}}">{{ item.name }}</a>
+          </li>
+          {% endfor %}
+          <li class="nav-item">
+            <div class="dropdown">
+              <a class="dropdown-toggle nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-globe"></i> <i class="bi bi-translate"></i></a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Español</a>
+                </li>
+                <li>
+                  <a class="dropdown-item disabled" href="#">Proximamente</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <button class="btn rounded-fill" onclick="switchTheme()"><i class="bi bi-moon-fill" id="icon-theme"></i></button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

@@ -21,12 +21,13 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('cookies-policy', views.cookies_policy, name="cookies-policy"),
-    path('', views.index, name="index"),
+    path('', views.index, name=""),
+    path('index', views.index, name="index"),
     path('about_me', views.about_me, name="about_me"),
     path('tecnology', views.tecnology, name="tecnology"),
     path('experience', views.experience, name="experience"),
     path('projects', views.projects, name="projects"),
     path('education', views.education, name="education"),
-    path('contact_me', views.ContactView.as_view(), name="contact_me"),
-    path('success', views.ContactSuccessView.as_view(), name="success"),
+    path('curriculum', views.curriculum, name="curriculum"),
+    path('contact', views.ContactView.as_view(), name="contact"),
 ]

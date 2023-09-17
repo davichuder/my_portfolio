@@ -1,53 +1,20 @@
-<!-- sobre_mi.html -->
-{% extends "./fragments/base.html" %}
+{% extends './fragments/base.html' %}
 {% load static %}
 
-{% block adicional_style %}
-<link rel="stylesheet" type="text/css" href='{% static "css/about_me.css" %}'>
-{% endblock %}
-
-{% block titulo_ventana %}David Rolón{% endblock %}
-
 {% block main %}
-<div class="container py-5 mb-5">
-    <div class="row">
-        <div class="col-md-8 offset-md-2">
-            <div class="about-me-content">
-                <p>
-                    Soy un <span class="fw-bold">apasionado de la tecnología</span> con experiencia en electricidad y electrónica.
-                    Esto me ha llevado a crecer profesionalmente en diferentes áreas.
-                </p>
-                <p>
-                    Mi formación como <span class="fw-bold">Full Stack Web Developer</span> me ha permitido incursionar en el mundo del
-                    desarrollo web, donde continúo expandiendo mis conocimientos en un campo siempre en evolución.
-                </p>
-                <p>
-                    Lo que más me apasiona es el análisis de datos, el Machine Learning y la Inteligencia Artificial.
-                    Estoy inmerso en el estudio para convertirme en un <span class="fw-bold">Data Scientist</span> y aplicar estas tecnologías
-                    innovadoras en proyectos concretos.
-                </p>
-                <p>
-                    Cuando no estoy sumergido en cursos o en el trabajo, disfruto de mis pasatiempos como mirar series
-                    y películas, leer libros, resolver cubos Rubik, jugar videojuegos y explorar el mundo del trading.
-                </p>
-                <p>
-                    Estoy emocionado por dar los primeros pasos en mi carrera en el mundo de la tecnología de la
-                    información. Si bien aún me falta experiencia específica, siempre estoy listo para aprender y crecer.
-                </p>
-                <p>
-                    Si buscas a alguien apasionado, comprometido y con un fuerte deseo de aprender, ¡no dudes en
-                    contactarme!
-                </p>
-                <p class="fst-italic">
-                    Gracias por visitar mi perfil. ¡Espero tener la oportunidad de colaborar juntos en proyectos
-                    emocionantes!
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="d-flex justify-content-between">
-        <a href="/" class="btn-anterior-flotante text-decoration-none">Anterior</a>
-        <a href="/tecnology" class="btn-siguiente-flotante text-decoration-none">Siguiente</a>
-    </div>
-</div>
+  <section class="about-me d-flex flex-column justify-content-evenly text-center align-items-center">
+    <p>
+      Soy un <span class="fw-bold">apasionado de la tecnología</span> con experiencia en <span class="fw-bold">programación, electricidad y electrónica</span>. Esto me ha llevado a crecer profesionalmente en diferentes áreas.
+    </p>
+    <p>
+      Mi formación como <span class="fw-bold">Full Stack Web Developer</span> me ha permitido incursionar en el mundo del desarrollo web, donde continúo expandiendo mis conocimientos en un campo siempre en evolución.
+    </p>
+    <p>
+      Lo que más me apasiona es el análisis de datos, el Machine Learning y la Inteligencia Artificial. Estoy inmerso en el estudio para convertirme en <span class="fw-bold">Data Scientist</span> y aplicar estas tecnologías innovadoras en proyectos concretos.
+    </p>
+    <p>Cuando no estoy sumergido en cursos o en el trabajo, disfruto de mis pasatiempos como mirar series y películas, leer libros, resolver cubos Rubik, jugar videojuegos y explorar el mundo del trading.</p>
+    <p>Estoy emocionado por dar los primeros pasos en mi carrera en el mundo de la tecnología de la información. Si bien aún me falta experiencia específica, siempre estoy listo para aprender y crecer.</p>
+    <p>Si buscas a alguien apasionado, comprometido y con un fuerte deseo de aprender, ¡no dudes en contactarme!</p>
+    <p class="fst-italic">Gracias por visitar mi perfil. ¡Espero tener la oportunidad de colaborar juntos en proyectos emocionantes!</p>
+  </section>
 {% endblock %}

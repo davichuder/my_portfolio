@@ -1,23 +1,17 @@
-{% extends "./fragments/base.html" %}
+{% extends './fragments/base.html' %}
 {% load static %}
 
-{% block titulo_ventana %}David Rolón{% endblock %}
-
 {% block main %}
-<div class="container py-5 mb-5">
-  <div class="row">
-    <div class="col-md-8 offset-md-2">
-      <h1>Política de privacidad</h1>
-      <p>Esta página web es un portfolio personal de programador que muestra algunos de mis proyectos
-        y habilidades.</p>
-      <p>No recopilo ni almaceno ningún dato personal de los visitantes de esta página, salvo las cookies que se
-        utilizan para recordar el tema de la página (claro u oscuro) y, próximamente, el idioma elegido.</p>
-      <p>Estas cookies son pequeños archivos de texto que se almacenan en el navegador del usuario y que no contienen
-        ninguna información identificable.<br>
-        Puedes eliminar o bloquear estas cookies en cualquier momento desde la configuración de tu navegador.</p>
-      <p>Si tienes alguna duda o consulta sobre esta política de privacidad, puedes contactarme a través del formulario
-        de contacto que encontrarás en esta página.</p>
+  <section class="cookies-policy container justify-content-evenly align-items-center ">
+    <h1 class="text-decoration-underline text-center">Política de privacidad</h1>
+    <div class="text-left my-3">
+    <p>Esta página web es un portafolio personal que muestra mis proyectos, habilidades, y experiencia.</p>
+    <p>No recopilo ni almaceno ningún dato personal de los visitantes de esta página, salvo las cookies que se utilizan para recordar el tema de la página (claro u oscuro) y, próximamente, el idioma elegido.</p>
+    <p>
+      Estas cookies son pequeños archivos de texto que se almacenan en el navegador del usuario y que no contienen ninguna información identificable.<br />
+      Puedes eliminar o bloquear estas cookies en cualquier momento desde la configuración de tu navegador.
+    </p>
+    <p>Si tienes alguna duda o consulta sobre esta política de privacidad, puedes contactarme a través del formulario de contacto que encontrarás en esta página.</p>
     </div>
-  </div>
-</div>
+  </section>
 {% endblock %}

@@ -1,17 +1,10 @@
 {% extends "./fragments/base.html" %}
 {% load static %}
 
-{% block titulo_ventana %}David Rolón{% endblock %}
-
-{% block adicional_style %}
-<link rel="stylesheet" type="text/css" href='{% static "css/experience_timeline.css" %}'>
-{% endblock %}
-
 {% block main %}
-<div class="container pb-5 pt-3">
-  <div class="main-timeline">
+<section class="experiences experiences-timeline">
     {% for item in experiences %}
-    <div class="timeline">
+    <div class="experience">
       <div class="icon"></div>
       <div class="date-content">
         <div class="date-outer">
@@ -22,16 +15,11 @@
         </div>
       </div>
       <div class="timeline-content">
-        <h4 class="title text-decoration-underline">{{item.job}}</h4>
-        <h5 class="subtitle fst-italic">{{item.company}}</h5>
+        <h5 class="title">{{item.job}}</h5>
+        <h5 class="subtitle">{{item.company}}</h5>
         <p class="description">{{item.description|linebreaks}}</p>
       </div>
     </div>
     {% endfor %}
-    <div class="d-flex justify-content-around">
-      <a href="/education" class="btn-anterior-flotante text-decoration-none">Anterior</a>
-      <a href="/contact_me" class="btn-siguiente-flotante text-decoration-none">Siguiente</a>
-    </div>
-  </div>
-</div>
+</section>
 {% endblock %}

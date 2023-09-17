@@ -1,37 +1,38 @@
-{% extends "./fragments/base.html" %}
+{% extends './fragments/base.html' %}
 {% load static %}
 
-{% block titulo_ventana %}David Rolón{% endblock %}
-
-{% block adicional_style %}
-<link rel="stylesheet" type="text/css" href='{% static "css/education_timeline.css" %}'>
-{% endblock %}
-
 {% block main %}
-<div class="timeline py-5">
-  {% for item in education %}
-  <div class="timeline-row">
-    <div class="timeline-time">
-      {{ item.date_end }}
-      <small>{{ item.date_start }}</small>
-    </div>
-    <div class="timeline-content">
-      {% with 'img/certificates/'|add:item.img_name as img_path %}
-      <img class="img-fluid rounded" src="{% static img_path %}"></img>
-      {% endwith %}
-      <h4 class="timeline-title my-0 text-wrap">{{ item.name }}</h4>
-      <h5 class="timeline-subtitle">{{ item.company }}</h5>
-      <div>
-        {% for badge in item.tags %}
-        <span class="badge badge-pill">{{ badge }}</span>
-        {% endfor %}
+  <section class="education timeline">
+    {% for item in education %}
+      <div class="timeline-row">
+        <div class="timeline-time">
+          {{ item.date_end }}
+          <small>{{ item.date_start }}</small>
+        </div>
+        <div class="timeline-content">
+          {% with 'img/certificates/'|add:item.img_name as img_path %}
+            <img class="img-fluid rounded zoom" src="{% static img_path %}" alt="{{ item.img_name }}"/>
+          {% endwith %}
+          <h4 class="timeline-title my-0 text-wrap">{{ item.name }}</h4>
+          <h5 class="timeline-subtitle">{{ item.company }}</h5>
+          <div class="super-badge">
+            {% for badge in item.tags %}
+              <span class="badge badge-pill">{{ badge }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </section>
+
+  <section class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <img src="" class="image-preview"/>
+        </div>
       </div>
     </div>
-  </div>
-  {% endfor %}
-  <div class="d-flex justify-content-between">
-    <a href="/projects" class="btn-anterior-flotante text-decoration-none">Anterior</a>
-    <a href="/experience" class="btn-siguiente-flotante text-decoration-none">Siguiente</a>
-  </div>
-</div>
+  </section>
 {% endblock %}
