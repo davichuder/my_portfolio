@@ -1,0 +1,48 @@
+main {
+    min-height: var(--body-height);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.previous_button {
+    position: fixed;
+    top: 50%;
+    left: 0%;
+    font-size: 1rem;
+}
+
+.next_button {
+    position: fixed;
+    top: 50%;
+    right: 0%;
+    font-size: 1rem;
+}
+
+.next_button:hover,
+.previous_button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0.15rem 0.15rem var(--shadow-next-button-hover);
+}
+
+@media (max-width: 991.98px) {
+    .previus_next_buttons {
+        display: flex;
+        margin-bottom: 1rem;
+    }
+
+    .previous_button,
+    .next_button {
+        position: static;
+    }
+
+    .main {
+        min-height: var(--body-height-lg);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .main {
+        min-height: var(--body-height-sm);
+    }
+}

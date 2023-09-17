@@ -1,0 +1,29 @@
+.img-brand {
+    height: 3rem;
+}
+
+.navbar>.container-fluid>.container-fluid {
+    width: fit-content;
+}
+
+.nav-item:hover {
+    border-radius: 1rem;
+    text-decoration: underline;
+    transform: scale(1.075);
+}
+
+.icon-logo-light {
+    content: var(--logo-light);
+}
+
+.icon-logo-dark {
+    content: var(--logo-dark);
+}
+
+.current-page:before {
+    content: "«";
+}
+
+.current-page:after {
+    content: "»";
+}

@@ -1,13 +1,11 @@
-:root {
-  --timeline-badge-text-dark: #2B3035;
-  --timeline-badge-bg-dark: #fff;
-
-  --timeline-badge-text-light: #fff;
-  --timeline-badge-bg-light: #6d8faf;
+.projects {
+  padding: 2rem 10rem;
+  margin: 0;
 }
 
 .card-wrapper {
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
+  cursor: pointer;
 }
 
 .card-img-top {
@@ -18,44 +16,44 @@
   height: 100%;
 }
 
-.card-image .card .card-body {
+.projects .card-image .card .card-body {
   display: none;
 }
 
-.card-image-title-description .card .card-img-wrapper {
+.projects .card-image-title-description .card .card-img-wrapper {
   max-height: 50%;
 }
 
-.card-image-title-description .card {
+.projects .card-image-title-description .card {
   position: relative;
-  min-height: 250px;
+  min-height: 16rem;
 }
 
-.card-image-title-description .card .card-body {
+.projects .card-image-title-description .card .card-body {
   height: auto;
   position: relative;
   top: 0;
-  margin-bottom: -70px;
+  margin-bottom: -4.5rem;
 }
 
-.card-image-title-description .card:hover .card-body {
+.projects .card-image-title-description .card:hover .card-body {
   top: 80%;
 }
 
-.card-image-title-description .card .card-body .card-title {
+.projects .card-image-title-description .card .card-body .card-title {
   margin-bottom: .75rem;
 }
 
-.card {
+.projects .card {
   display: inline-block;
   position: relative;
   overflow: hidden;
-  min-height: 500px;
+  min-height: 37.5rem;
   height: 100%;  
 }
 
-.card:hover {
-  box-shadow: 8px 12px 31px -10px #ab98ab;
+.projects .card:hover {
+  box-shadow: 0 0 1rem var(--card-hover);
 }
 
 .card-img-wrapper {
@@ -67,23 +65,23 @@
 }
 
 .card-img-wrapper img {
-  transition: 1.5s ease;
+  transition: 0.5s ease;
 }
 
-.card:hover .card-img-wrapper img {
+.projects .card:hover .card-img-wrapper img {
   transform: scale(1.15);
 }
 
-.card-body .card-title {
-  margin-bottom: calc(50% + 20px);
-  transition: 1.5s ease;
+.projects .card-body .card-title {
+  margin-bottom: calc(50% + 1.25rem);
+  transition: 0.5s ease;
 }
 
-.card:hover .card-body .card-title {
+.projects .card:hover .card-body .card-title {
   margin-bottom: .75rem;
 }
 
-.card-body {
+.projects .card-body {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -99,14 +97,14 @@
   overflow: hidden;
   width: 100%;
   height: auto;
-  transition: 1.5s ease;
+  transition: 0.5s ease;
 }
 
-.card:hover .card-body {
+.projects .card:hover .card-body {
   height: 70%;
 }
 
-.card:hover .card-content {
+.projects .card:hover .card-content {
   bottom: 0;
 }
 
@@ -125,11 +123,63 @@
 }
 
 .big-badge {
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
-@media only screen and (max-width: 1200px) {
-  .card:hover .card-body {
+@media (max-width: 1399.98px) {
+  .projects .card {
+    min-height: 32.5rem;
+  }
+}
+
+@media only screen and (max-width: 1199.98px) {
+  .projects .card:hover .card-body {
     height: 100%;
+  }
+  .projects .card {
+    min-height: 27.5rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .projects {
+    padding: 3rem 2rem 1rem 2rem;
+    position: relative;
+  }
+
+  .projects .card {
+    min-height: 27.5rem;
+  }
+
+  .projects:before {
+    content: "Projectos";
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1.25rem;
+    text-decoration: underline;
+    font-weight: bolder;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .projects {
+    padding: 3rem 1rem 1rem 1rem;
+  }
+
+  .projects .card {
+    min-height: 37.5rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .projects {
+    padding: 3rem 0.5rem 0.5rem 0.5rem;
+  }
+
+  .projects .card {
+    min-height: 25rem;
   }
 }

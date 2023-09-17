@@ -14,11 +14,16 @@ function getCookiePolicyCookie() {
 }
 
 const hideCookie = () => {
-    document.querySelector("#cookie-policy").setAttribute("hidden", "true");
+    document.querySelector("#cookie-policy").style.visibility = 'hidden';
     setCookiePolicyCookie(true);
+}
+
+const showCookie = () => {
+    document.querySelector("#cookie-policy").style.visibility = 'visible';
+    setCookiePolicyCookie(false);
 }
 
 function verifyCookiePolicyCookie() {
     cookiePolicy = getCookiePolicyCookie();
-    if (cookiePolicy === "true") {hideCookie();}
+    if (cookiePolicy === "false" | cookiePolicy === undefined) { showCookie(); }
 }

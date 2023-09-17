@@ -1,11 +1,25 @@
-.about-me-content {
-  border-radius: 5px;
+.about-me {
+  padding: 0 10rem;
+  min-height: var(--body-height-lg);
 }
 
-.about-me-content h2 {
-  color: #007bff;
+@media (max-width: 991.98px) {
+  .about-me {
+    padding: 0rem 5rem;
+    min-height: var(--body-height-sm);
+  }
+
+  .about-me:before {
+    content: "Sobre mi";
+    font-size: 1.25rem;
+    text-decoration: underline;
+    font-weight: bolder;
+    padding-bottom: 0.5rem;
+  }
 }
 
-.about-me-content p {
-  margin-bottom: 15px;
+@media (max-width: 575.98px) {
+  .about-me {
+    padding: 0rem 2rem;
+  }
 }

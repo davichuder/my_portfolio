@@ -9,14 +9,14 @@ function getThemeCookie() {
 const lightTheme = () => {
     document.querySelector("body").setAttribute("data-bs-theme", "light");
     document.querySelector("#icon-theme").setAttribute("class", "bi bi-sun-fill");
-    document.querySelector("#icon-logo").setAttribute("class", "icon-logo-dark");
+    document.querySelector(".img-brand").setAttribute("class", "img-brand icon-logo-dark");
     setThemeCookie("light");
 }
 
 const darkTheme = () => {
     document.querySelector("body").setAttribute("data-bs-theme", "dark");
     document.querySelector("#icon-theme").setAttribute("class", "bi bi-moon-fill");
-    document.querySelector("#icon-logo").setAttribute("class", "icon-logo-light");
+    document.querySelector(".img-brand").setAttribute("class", "img-brand icon-logo-light");
     setThemeCookie("dark");
 }
 

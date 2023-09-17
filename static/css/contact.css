@@ -1,0 +1,76 @@
+.contact {
+  padding: 2rem 10rem 1rem 10rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact .panel {
+  width: 80%;
+  border-radius: 2rem;
+  border: 0.125rem solid var(--contact-border);
+  padding: 2rem 2rem 4rem 2rem;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.contact .panel .contact-panel form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact .panel .btn {
+  width: 50%;
+  position: absolute;
+  left: 25%;
+  bottom: 0.5rem;
+  border: 0.125rem solid var(--contact-border);
+  background: var(--bs-secondary-bg);
+}
+
+.contact .panel .btn.disabled {
+  border: 0.0625rem solid var(--contact-border);
+}
+
+.contact .title {
+  text-decoration: underline;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact .alert-error {
+  background: red;
+  margin: 0;
+  border-radius: 2rem;
+}
+
+.contact .alert-error {
+  margin: 0;
+  border-radius: 2rem;
+}
+
+.contact .alert-error p,
+.contact .alert-success p {
+  margin: 0;
+  font-weight: bold;
+}
+
+@media (max-width: 1199.98px) {
+  .contact .panel {
+    width: 95%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .contact {
+    padding: 2rem 2rem 1rem 2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .contact {
+    padding: 1rem 1rem 1rem 1rem;
+  }
+}

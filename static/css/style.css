@@ -1,0 +1,15 @@
+@import url(variables.css);
+@import url(body.css);
+@import url(header.css);
+@import url(main.css);
+@import url(footer.css);
+@import url(cookie.css);
+
+@import url(index.css);
+@import url(about_me.css);
+@import url(tecnology.css);
+@import url(projects.css);
+@import url(education.css);
+@import url(experience.css);
+@import url(curriculum.css);
+@import url(contact.css);

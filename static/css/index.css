@@ -1,0 +1,14 @@
+.intro {
+    min-height: var(--body-height);
+}
+
+@media (max-width: 991.98px) {
+    .intro {
+        min-height: var(--body-height-sm);
+    }
+}
+
+.img-portrait {
+    height: 15rem;
+    aspect-ratio: 1;
+}

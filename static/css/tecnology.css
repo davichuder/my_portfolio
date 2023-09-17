@@ -1,0 +1,72 @@
+.tecnology {
+  padding: 2rem 10rem;
+  margin: 0;
+}
+
+
+@media (max-width: 991.98px) {
+  .tecnology {
+    padding: 3rem 4rem 1rem 4rem;
+    position: relative;
+  }
+
+  .tecnology:before {
+    content: "Tecnologías";
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1.25rem;
+    text-decoration: underline;
+    font-weight: bolder;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .tecnology {
+    padding: 2rem 1rem 1rem 1rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .tecnology {
+    padding: 2rem 0.5rem 1rem 0.5rem;
+  }
+}
+
+.tecnology .card {
+  transition: all 0.3s;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.tecnology .card-body {
+  display: block;
+  flex: none;
+  padding: 0;
+}
+
+.tecnology .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 1rem var(--card-hover);
+}
+
+.img-card-size {
+  max-height: 30%;
+  object-fit: contain;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  margin-top: 0.5rem;
+  aspect-ratio: 3/2;
+}
+
+[data-bs-theme="dark"] .tecnology .card {
+  border: 0.0625rem solid #fff;
+  background-color: var(--bs-secondary-bg);
+}
+
+[data-bs-theme="light"] .tecnology .card {
+  border: 0.0625rem solid var(--card-tecnology-border-light);
+}
