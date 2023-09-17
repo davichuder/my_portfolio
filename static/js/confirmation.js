@@ -26,6 +26,5 @@ $(function () {
         let text_incorrecto = '<strong style="color:red;">¡Incorrecto!<strong>';
         $(".confirmation").html(text_confirmation + " " + text_incorrecto);
         $("#submit-button").addClass("disabled");
-        console.log("false");
     });
 });
