@@ -33,6 +33,21 @@ class ContactForm(forms.Form):
                 use_tls=settings.EMAIL_USE_TLS
         ) as connection:
             from_email = settings.EMAIL_HOST_USER
-            recipient_list = [settings.EMAIL_HOST_USER]
+            recipient_list = [settings.NOTICE_EMAIL]
+            cc_list = [cc_email]
+            EmailMessage(subject, msg, from_email, recipient_list, connection=connection, cc=cc_list).send()
+
+    def send_alternative(self):
+        cc_email, subject, msg = self.get_info()
+
+        with get_connection(
+                host=settings.EMAIL_HOST_ALT,
+                port=settings.EMAIL_PORT_ALT,
+                username=settings.EMAIL_HOST_USER_ALT,
+                password=settings.EMAIL_HOST_PASSWORD_ALT,
+                use_tls=settings.EMAIL_USE_TLS_ALT
+        ) as connection:
+            from_email = settings.EMAIL_HOST_USER_ALT
+            recipient_list = [settings.NOTICE_EMAIL]
             cc_list = [cc_email]
             EmailMessage(subject, msg, from_email, recipient_list, connection=connection, cc=cc_list).send()

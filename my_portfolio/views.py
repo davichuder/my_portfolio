@@ -71,6 +71,7 @@ class ContactView(View):
     page_flow = obtain_url_buttons_from_template(models.Pages, template_name)
     success_msg = 'El mensaje se envió correctamente.'
     error_msg = 'Hubo un error al enviar el mensaje.\nIntenta nuevamente, o contactame por otro medio.\nMis redes están abajo. ↓↓↓'
+    incomplete_msg = 'Por favor, revise su conexión a Internet, el mensaje llego incompleto.'
 
     def get(self, request, *args, **kwargs):
         form = ContactForm()
@@ -81,13 +82,17 @@ class ContactView(View):
 
     def post(self, request, *args, **kwargs):
         form = ContactForm(request.POST)
-        try:
-            if form.is_valid():
-                form.send()
+        if form.is_valid():
+            try:
+                try:
+                    form.send()
+                except:
+                    form.send_alternative()
                 messages.success(request, self.success_msg)
-            else:
+            except:
                 messages.error(request, self.error_msg)
-        except:
-            messages.error(request, self.error_msg)
-        finally:
-            return redirect('contact')
+            finally:
+                return redirect('contact')
+        else:
+            messages.warning(request, self.incomplete_msg)
+        return redirect('contact')

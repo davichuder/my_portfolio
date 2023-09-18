@@ -49,11 +49,19 @@ Una vez instalado puede clonar el repositorio en la carpeta que usted desee
 Ademas sera necesario crear el archivo .env en la carpeta my_portfolio. Y se debe llenar las siguientes variables de entorno
 
 ```bash
+NOTICE_EMAIL='EMAIL TO NOTIFY'
+
 EMAIL_HOST='YOUR EMAIL HOST'
 EMAIL_HOST_USER='YOUR EMAIL ADDRESS'
 EMAIL_HOST_PASSWORD='YOUR EMAIL APP PASSWORD'
 EMAIL_PORT='YOUR EMAIL PORT'
 EMAIL_USE_TLS='True for TLS; False for SSL'
+
+EMAIL_HOST_ALT='YOUR EMAIL HOST ALTERNATIVE'
+EMAIL_HOST_USER_ALT='YOUR EMAIL ADDRESS ALTERNATIVE'
+EMAIL_HOST_PASSWORD_ALT='YOUR EMAIL APP PASSWORD ALTERNATIVE'
+EMAIL_PORT_ALT='YOUR EMAIL PORT ALTERNATIVE'
+EMAIL_USE_TLS_ALT='True for TLS; False for SSL'
 ```
 
 Se recomienda generar contraseñas de aplicaciones por motivos de seguridad, dejo algunos guias de como generarlos
@@ -97,11 +105,17 @@ DEBUG = False
 Ademas debera configurar la lista donde se debe indicar las direcciones de IP o dominios en los que se provee la aplicación web en el ambiente de producción en settings.py
 
 ```bash
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['YOU DOMAIN URL']
 ```
 
-Tambien acuerdese de configurar la carpeta root dpara los archivos estaticos
+Tambien acuerdese de configurar la carpeta root para los archivos estaticos
 
 ```bash
 STATIC_ROOT = 'your_location'
+```
+
+Y luego ejecutar el siguiente codigo para que queden cargados correctamente
+
+```bash
+python .\manage.py collectstatic
 ```

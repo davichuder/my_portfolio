@@ -3,37 +3,35 @@
 
 {% block main %}
   <section class="contact">
+    {% if messages %}
+      {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">{{ message|linebreaks }}</div>
+      {% endfor %}
+    {% endif %}
     <h2 class="title">Contactamé</h2>
     <div class="panel">
       <div class="contact-panel">
         <form action="{% url 'contact' %}" method="POST" id="contact-form">
           {% csrf_token %}
           <div class="form-group">
-            <input type="text" class="form-control" name="name" placeholder="Nombre" required/>
+            <input type="text" class="form-control" name="name" placeholder="Nombre" required />
           </div>
           <div class="form-group">
-            <input type="email" class="form-control" name="email" placeholder="Email" required/>
+            <input type="email" class="form-control" name="email" placeholder="Email" required />
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" name="subject" placeholder="Asunto" required/>
+            <input type="text" class="form-control" name="subject" placeholder="Asunto" required />
           </div>
           <div class="form-group">
             <textarea rows="10" class="form-control" name="message" placeholder="Mensaje" required></textarea>
           </div>
           <div class="form-group">
             <label class="confirmation"></label>
-            <input type="text" class="form-control" id="sum" placeholder="Resultado"/>
+            <input type="text" class="form-control" id="sum" placeholder="Resultado" />
           </div>
           <button type="submit" class="btn btn-lg disabled" id="submit-button">Enviar</button>
         </form>
       </div>
     </div>
-    {% if messages %}
-    {% for message in messages %}
-      <div class="alert alert-{{ message.tags }}">
-        {{ message|linebreaks }}
-      </div>
-    {% endfor %}
-  {% endif %}
   </section>
 {% endblock %}
