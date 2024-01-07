@@ -41,7 +41,7 @@ def projects(request, template_name='my_portfolio/projects.html'):
     return render(request, template_name, context=context)
 
 def education(request, template_name='my_portfolio/education.html'):
-    education = all_row_model_to_dict(models.Education)
+    education = all_row_model_to_dict(models.Education, "-date_end_year", "-date_end_month", "-date_start_year", "-date_start_month")
     page_flow = obtain_url_buttons_from_template(models.Pages, template_name)
     for item in education:
         item["tags"] = models.Education.objects.get(name=item["name"]).tags.names()
@@ -51,7 +51,7 @@ def education(request, template_name='my_portfolio/education.html'):
     return render(request, template_name, context=context)
 
 def experience(request, template_name='my_portfolio/experience.html'):
-    experiences = all_row_model_to_dict(models.Experience)
+    experiences = all_row_model_to_dict(models.Experience, "-date_end_year", "-date_end_month", "-date_start_year", "-date_start_month")
     page_flow = obtain_url_buttons_from_template(models.Pages, template_name)
     context = {"experiences": experiences,
                "page_flow": page_flow,

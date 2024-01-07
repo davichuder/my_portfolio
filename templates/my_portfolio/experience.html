@@ -1,5 +1,6 @@
 {% extends "./fragments/base.html" %}
 {% load static %}
+{% load filter_number_to_month %}
 
 {% block main %}
 <section class="experiences experiences-timeline">
@@ -9,8 +10,14 @@
       <div class="date-content">
         <div class="date-outer">
           <span class="date">
-            <span class="end">{{item.date_end}}</span>
-            <span class="start">{{item.date_start}}</span>
+            <span class="end">
+              {% if item.date_end_year|equal_current_year and item.date_end_month|greater_current_month or item.date_end_year|greater_current_year %}
+                Actualidad
+              {% else %}
+                {{ item.date_end_month|short_month_name }} {{ item.date_end_year }}
+              {% endif %}
+            </span>
+            <span class="start">{{ item.date_start_month|short_month_name }} {{ item.date_start_year }}</span>
           </span>
         </div>
       </div>

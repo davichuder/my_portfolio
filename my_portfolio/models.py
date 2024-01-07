@@ -1,5 +1,6 @@
 from django.db import models
 from taggit.managers import TaggableManager
+from django.core.validators import MaxValueValidator
 
 class Pages(models.Model):
     name = models.CharField(max_length=64, blank=True, default="", unique=True)
@@ -49,8 +50,10 @@ class Tag(models.Model):
 class Experience(models.Model):
     job = models.CharField(max_length=64)
     company = models.CharField(max_length=64)
-    date_start = models.CharField(max_length=32)
-    date_end = models.CharField(max_length=32)
+    date_start_month = models.PositiveSmallIntegerField(validators=[MaxValueValidator(12)])
+    date_start_year = models.PositiveSmallIntegerField(validators=[MaxValueValidator(9999)])
+    date_end_month = models.PositiveSmallIntegerField(validators=[MaxValueValidator(12)])
+    date_end_year = models.PositiveSmallIntegerField(validators=[MaxValueValidator(9999)])
     description = models.TextField(max_length=512)
 
     class Meta:
@@ -61,8 +64,10 @@ class Experience(models.Model):
 
 class Education(models.Model):
     name = models.CharField(max_length=64)
-    date_start = models.CharField(max_length=32)
-    date_end = models.CharField(max_length=32)
+    date_start_month = models.PositiveSmallIntegerField(validators=[MaxValueValidator(12)])
+    date_start_year = models.PositiveSmallIntegerField(validators=[MaxValueValidator(9999)])
+    date_end_month = models.PositiveSmallIntegerField(validators=[MaxValueValidator(12)])
+    date_end_year = models.PositiveSmallIntegerField(validators=[MaxValueValidator(9999)])
     company = models.CharField(max_length=64)
     img_name = models.CharField(max_length=32)
     tags = TaggableManager()

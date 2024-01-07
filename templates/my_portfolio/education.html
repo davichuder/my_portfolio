@@ -1,13 +1,18 @@
 {% extends './fragments/base.html' %}
 {% load static %}
+{% load filter_number_to_month %}
 
 {% block main %}
   <section class="education timeline">
     {% for item in education %}
       <div class="timeline-row">
         <div class="timeline-time">
-          {{ item.date_end }}
-          <small>{{ item.date_start }}</small>
+          {% if item.date_end_year|equal_current_year and item.date_end_month|greater_current_month or item.date_end_year|greater_current_year %}
+            Cursando
+          {% else %}
+            {{ item.date_end_month|month_name }} {{ item.date_end_year }}
+          {% endif %}
+          <small>{{ item.date_start_month|month_name }} {{ item.date_start_year }}</small>
         </div>
         <div class="timeline-content">
           {% with 'img/certificates/'|add:item.img_name as img_path %}
