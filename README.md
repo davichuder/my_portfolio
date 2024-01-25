@@ -74,7 +74,7 @@ Ademas dejo el link para sabes que puerto y url de servidor son los mejores para
 
 [Host and Port Table](https://apps.mexagon.net/clientes/knowledgebase/104/iCual-es-el-Host-y-el-puerto-SMTP-de-mi-servidor-de-Mail-.html)
 
-Para poder agregar, eliminar o modificar las tecnologias, projectos, formación o experiencia desde el panel de administrador de Django es necesario crear un usuario con el siguiente comando:
+Para poder agregar, eliminar o modificar las tecnologias, proyectos, formación o experiencia desde el panel de administrador de Django es necesario crear un usuario con el siguiente comando:
 
 ```bash
 python .\manage.py createsuperuser

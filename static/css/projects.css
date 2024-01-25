@@ -152,7 +152,7 @@
   }
 
   .projects:before {
-    content: "Projectos";
+    content: "Proyectos";
     position: absolute;
     top: 0.5rem;
     left: 0;
